@@ -10,6 +10,11 @@
     "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
     "client:build": "cd client && npm run build"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run client:build"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/conor-deegan/web-app-boilerplate.git"
@@ -24,6 +29,7 @@
     "body-parser": "^1.19.0",
     "concurrently": "^5.2.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "husky": "^4.2.5"
   }
 }
